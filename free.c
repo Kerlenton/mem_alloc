@@ -1,6 +1,7 @@
-#include "common.c"
+#include <assert.h>
+#include "common.h"
 
-void free(void *ptr) {
+void my_free(void *ptr) {
     if (!ptr) {
         return;
     }

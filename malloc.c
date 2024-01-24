@@ -1,6 +1,8 @@
-#include "common.c"
+#include <unistd.h>
 
-void *malloc(size_t size) {
+#include "common.h"
+
+void *my_malloc(size_t size) {
     struct block_meta *block;
     // TODO: align size?
     if (size <= 0) {
@@ -28,4 +30,3 @@ void *malloc(size_t size) {
     }
     return (block + 1);
 }
-
